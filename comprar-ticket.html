@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conf Bs As</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+  * {
+    scroll-behavior: smooth;
+  }
+
+
+  li {
+    list-style: none;
+  }
+
+  html {
+    min-height: 100vh;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+</style>
+
+
+<body>
+  <header class="fixed-top ">
+    <nav class="navbar navbar-expand-md navbar-light bg-dark ">
+      <button class="navbar-toggler  mr-auto  " type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white" href="#conferencia"><img src="./assets/codoacodo.png"
+          alt="Logo de Codo a Codo">Conf Bs As</a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto  ">
+
+          <li class="nav-item ">
+            <a class="nav-link text-white   " href="#conferencia">La conferencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white " href="#oradores">Los oradores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#lugar">El lugar y la fecha</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="#conviertete-en-orador">Conviertete en orador</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-success" href="./comprar-ticket.html">Comprar ticket</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div style="height: 84px;">
+  </div>
+  <main class="container my-3">
+    <section id="descuentos" class="d-flex flex-wrap  justify-content-around" style=" line-height: 45px;">
+
+     
+    </section>
+
+    <section id="formulario">
+
+      <div class="text-center">
+        <h2><span class="h6">VENTA</span> <br>
+          VALOR DE TICKET $<span id="precioTicket"></span></h2>
+
+      </div>
+
+      <form id="formularioTicket">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="mail" class="form-control" id="inputCorreo" placeholder="Correo">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCantidad">Cantidad</label>
+            <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputCategoria">Categoria</label>
+            <select id="inputCategoria" class="form-control">
+            </select>
+          </div>
+        </div>
+
+        <div class="alert alert-primary" role="alert">
+          Total a pagar: $<span id="total"></span>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <button id="btnBorrar" class="btn btn-success form-control">Borrar</button>
+          </div>
+          <div class="form-group col-md-6">
+            <button id="btnResumen" class="btn btn-success form-control">Resumen</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+
+  </main>
+
+
+
+  <footer class="bg-primary text-white py-3  ">
+    <ul class="d-flex flex-wrap p-0 m-0  justify-content-center justify-content-lg-around  align-items-center">
+      <li class="col-6 col-md-4 col-lg-1 mb-lg-0 mb-3 text-center ">Preguntas<br>frecuentes</li>
+      <li class="col-6 col-md-4 col-lg-1 mb-lg-0 mb-3 text-center ">Contactanos</li>
+      <li class="col-6 col-md-4 col-lg-1 mb-lg-0 mb-3 text-center ">Prensa</li>
+      <li class="col-6 col-md-4 col-lg-1 mb-lg-0 mb-3 text-center ">Conferencias</li>
+      <li class="col-6 col-md-4 col-lg-1 mb-lg-0 mb-3 text-center ">Terminos y <br>condiciones</li>
+      <li class="col-6 col-md-4 col-lg-1 mb-lg-0 mb-3 text-center ">Privacidad</li>
+      <li class="col-6 col-md-4 col-lg-1 mb-lg-0 mb-3 text-center ">Estudiantes</li>
+    </ul>
+  </footer>
+
+
+  <script src="./js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
